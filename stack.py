@@ -4,7 +4,7 @@ def is_valid_parentheses(s: str) -> bool:
     Only (), {}, and [] are considered valid.
     """
     stack = []
-    matching = {')', '(', '}', '{', ']', '['}
+    matching = {')': '(', '}': '{', ']': '['}
 
     for character in s:
         if character in matching.values():
@@ -21,10 +21,9 @@ def is_valid_parentheses(s: str) -> bool:
 # Loop through the input string
     # If its an opening bracket, push to stack
     # If its a closing bracket:
-        # If the stack is empty, return false
-        # If the top of the stack doesnt match the cooresponding opening, return false
-        # Otherwise, pop the opening
+    # If the stack is empty, return false
+    # If the top of the stack doesnt match the cooresponding opening, return false
+    # Otherwise, pop the opening
     # After the loop:
-        # If yes, return True
-        # If not, return False
-
+    # If yes, return True
+    # If not, return False
